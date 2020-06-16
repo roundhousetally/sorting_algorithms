@@ -28,4 +28,8 @@ void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void swap_node(listint_t *list, listint_t *left, listint_t *right);
+int partparty(int *array, int low, int high);
+void swap(int *left, int *right);
+void quicky(int *array, int low, int high);
+void swappy(int *array, int *left, int *right, int size);
 #endif
