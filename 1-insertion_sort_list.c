@@ -38,6 +38,7 @@ void insertion_sort_list(listint_t **list)
 				pt->next = trav->next, pt->prev = trav;
 				if (trav->next)
 					trav->next->prev = pt;
+				trav->prev = tmp;
 				trav->next = pt, flippy = 0;
 				/*if (tmp == NULL)*/
 					/* *list = trav;*/
