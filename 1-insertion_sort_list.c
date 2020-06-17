@@ -23,14 +23,14 @@ void insertion_sort_list(listint_t **list)
 	if (*list == NULL || list == NULL || (*list)->next == NULL)
 		return;/* also checks next, no point sorting single node */
 	oloop = *list, oloop = oloop->next;/* start loop at index 1 of list */
-	while (oloop)
+	while (oloop != NULL)
 	{
 		trav = oloop;
 		pt = trav->prev;
-		while (pt)/* inner loop for backwards increment of trav*/
+		while (trav->prev != NULL)/* inner loop for backwards increment of trav*/
 		{/* trav will travel backwards until head of list */
 			flippy = 1;
-			if (pt->n < trav->n)
+			if (pt->n > trav->n)
 			{
 				tmp = pt->prev;
 				if (tmp)
@@ -46,6 +46,7 @@ void insertion_sort_list(listint_t **list)
 			}
 			if (flippy)
 				trav = trav->prev;
+			pt = trav->prev;
 		}
 		oloop = oloop->next;/* next node of linked list */
 	}
