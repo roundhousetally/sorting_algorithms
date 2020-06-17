@@ -20,7 +20,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *trav, *tmp, *oloop, *pt;
 	int flippy;/* "if flippy" is more fun to say than "if flag" */
 
-	if (*list == NULL || list == NULL || (*list)->next == NULL)
+	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;/* also checks next, no point sorting single node */
 	oloop = *list, oloop = oloop->next;/* start loop at index 1 of list */
 	while (oloop != NULL)
