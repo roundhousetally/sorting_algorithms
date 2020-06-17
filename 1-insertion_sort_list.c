@@ -46,6 +46,8 @@ void insertion_sort_list(listint_t **list)
 			}
 			if (flippy)
 				trav = trav->prev;
+			if (!flippy)
+				trav = pt;
 			pt = trav->prev;
 		}
 		oloop = oloop->next;/* next node of linked list */
